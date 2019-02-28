@@ -14,7 +14,7 @@ class SignupController extends Controller
     	return view('admin.signup.create');
     }
     public function create(Requst $request)
-{
+    {
   // 以下を追記
       // Varidationを行う
       $this->validate($request, Signup::$rules);
@@ -28,11 +28,7 @@ class SignupController extends Controller
       // データベースに保存する
       $signup->fill($form);
       $signup->save();
-
-}
-
-   {
-     return redirect('admin/signup/create');
+      return redirect('admin/signup/create');
    }
 
   public function edit()
