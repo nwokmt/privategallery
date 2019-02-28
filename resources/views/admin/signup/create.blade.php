@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>新規ユーザー登録</h2>
-                <form action="{{ action('Admin\SignController@create') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ action('Admin\SignupController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
                         <ul>
