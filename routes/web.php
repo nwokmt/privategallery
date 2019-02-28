@@ -14,6 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('signup/create', 'Admin\SignupController@add');
+Route::post('signup/create', 'Admin\SignupController@create');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create', 'Admin\NewsController@add');
