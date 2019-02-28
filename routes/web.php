@@ -14,9 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('news/create', 'Admin\NewsController@add');
 });
-Route::get('signup/create', 'Admin\SignupController@add');
-Route::post('signup/create', 'Admin\SignupController@create');
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
+});
