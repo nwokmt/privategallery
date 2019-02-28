@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    PrivateGallery
+                    Private☆Gallery
                 </div>
 
                 <div class="links">
