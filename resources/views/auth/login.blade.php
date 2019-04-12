@@ -55,6 +55,11 @@
                                         {{ __('Login') }}
                                     </button>
                                 </div>
+                                <div class="col-md-8 offset-md-4">
+                                @if (Route::has('register'))
+                                <a href="{{ route('register') }}">登録はこちらから</a>
+                                @endif
+                                </div>
                             </div>
                         </form>
                     </div>

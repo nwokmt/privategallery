@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Profile;
+use App\User;
+use Illuminate\Support\facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+    	$id = Auth::id();
+    	$profiles = Profile::find($id);
+        return view('home',['profiles' => $profiles]);
     }
 }

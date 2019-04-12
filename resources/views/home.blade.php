@@ -14,7 +14,18 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    @if (!empty($profiles))
+                    <a href="/admin/profile">[プロフィール確認]</a>
+                    @endif
+                    <a href="/admin/profile/edit">[プロフィール編集]</a>
+<br>
+                    <a href="/admin/item">[商品一覧]</a>
+
+<br>
+                    <a href="/admin/order">[注文一覧]</a>
+<br>
+                    <a href="/admin/ordermade/list">[オーダーメイド注文一覧]</a>
+
                 </div>
             </div>
         </div>
